@@ -14,12 +14,38 @@
 
 ---
 
+## 🎯 Career Journey
+
+```mermaid
+timeline
+    title Professional Timeline
+    2016-2017 : Test Yantra : Test Analyst & Business Engagement
+    2017-2018 : FuGenX Technologies : Project Coordinator
+    2018-2019 : HummingWave : Project Coordinator
+    2019-2020 : Nuclei : Project Manager
+    2020-2023 : Ernst & Young (EY) : Business Consultant
+    2023-2024 : Upfront Healthcare : Senior Scrum Master
+    2024-2025 : Tru : Senior Project Manager
+    2025 : Independent PM Consultant
+```
+
+## 📈 Impact at a Glance
+
+- ✅ **Led 18-member cross-functional teams** across Banking, Healthcare, Retail
+- - ✅ **Delivered 3 parallel initiatives on schedule** (web, mobile, e-commerce)
+  - - ✅ **Spearheaded organization-wide Agile transformations** at Upfront Healthcare & EY
+    - - ✅ **Implemented AI/ML workflow automation** (2+ years hands-on experience)
+      - - ✅ **Recognized for Exceptional Quality Delivery** - BPCL Project
+        - - ✅ **Managed Salesforce implementations** for enterprise clients
+
+---
+
 ## 🚀 About Me
 
 ```yaml
 name: Deven Kashyap
 role: Senior Program Manager
-experience: 8+ years
+experience: 7 years
 focus:
   - Multi-domain delivery programs (Banking, Healthcare, Retail)
   - Agile transformation & coaching
@@ -145,22 +171,7 @@ Currently focused on:
 
 ---
 
-## 🎯 Career Journey
 
-```mermaid
-timeline
-    title Professional Timeline
-    2016-2017 : Test Yantra : Test Analyst & Business Engagement
-    2017-2018 : FuGenX Technologies : Project Coordinator
-    2018-2019 : HummingWave : Project Coordinator
-    2019-2020 : Nuclei : Project Manager
-    2020-2023 : Ernst & Young (EY) : Business Consultant
-    2023-2024 : Upfront Healthcare : Senior Scrum Master
-    2024-2025 : Tru : Senior Project Manager
-    2025 : Independent PM Consultant
-```
-
----
 
 ## 📌 Current Projects & Focus Areas
 
