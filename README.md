@@ -32,7 +32,7 @@ timeline
 ## 📈 Impact at a Glance
 
 - ✅ **Led 18-member cross-functional teams** across Banking, Healthcare, Retail
-- - ✅ **Delivered 3 parallel initiatives on schedule** (web, mobile, e-commerce)
+- - ✅ **Delivered 5 parallel initiatives on schedule** (web, mobile, e-commerce)
   - - ✅ **Spearheaded organization-wide Agile transformations** at Upfront Healthcare & EY
     - - ✅ **Implemented AI/ML workflow automation** (2+ years hands-on experience)
       - - ✅ **Recognized for Exceptional Quality Delivery** - BPCL Project
@@ -120,10 +120,10 @@ Currently focused on:
 
 | Achievement | Details |
 |-------------|----------|
-| 💼 **Experience** | **8+ years** PM/Agile leadership across Banking, Healthcare, Retail |
+| 💼 **Experience** | **7 years** PM/Agile leadership across Banking, Healthcare, Retail |
 | 🎓 **Certification** | **CSM® certified** (Scrum Alliance) + PMP® Training + SFPC |
 | 👥 **Team Leadership** | Led **18-member** cross-functional teams |
-| 🚀 **Delivery Excellence** | Delivered **3 parallel initiatives** on schedule |
+| 🚀 **Delivery Excellence** | Delivered **5 parallel initiatives** on schedule |
 | 🔄 **Transformations** | Spearheaded **organization-wide** Agile transformations |
 | 🏅 **Recognition** | **Exceptional Quality Delivery** - BPCL | **EY Innovation Bronze** |
 
