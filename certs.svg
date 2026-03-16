@@ -1,0 +1,84 @@
+<svg fill="none" viewBox="0 0 900 100" width="900" height="100" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .wrap {
+          width: 900px; height: 100px;
+          background: linear-gradient(135deg, #0d0d1a 0%, #0f0a2e 100%);
+          display: flex; align-items: center; justify-content: center;
+          gap: 12px; padding: 16px 24px;
+          font-family: 'DM Sans', sans-serif;
+          position: relative; overflow: hidden;
+        }
+        .cert {
+          display: flex; align-items: center; gap: 10px;
+          background: rgba(255,255,255,0.04);
+          border: 1px solid rgba(255,255,255,0.1);
+          border-radius: 12px;
+          padding: 10px 16px;
+          flex: 1;
+          animation: fadeIn 0.8s ease both;
+          box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+          position: relative;
+          overflow: hidden;
+        }
+        .cert::before {
+          content: '';
+          position: absolute; top: 0; left: 0; bottom: 0;
+          width: 3px;
+        }
+        .cert.c1::before { background: linear-gradient(180deg, #7c3aed, #a855f7); }
+        .cert.c2::before { background: linear-gradient(180deg, #06b6d4, #0284c7); }
+        .cert.c3::before { background: linear-gradient(180deg, #10b981, #059669); }
+        .cert:nth-child(1) { animation-delay: 0.1s; }
+        .cert:nth-child(2) { animation-delay: 0.2s; }
+        .cert:nth-child(3) { animation-delay: 0.3s; }
+        @keyframes fadeIn {
+          from { opacity: 0; transform: scale(0.95); }
+          to   { opacity: 1; transform: scale(1); }
+        }
+        .cert-icon { font-size: 22px; flex-shrink: 0; }
+        .cert-info { flex: 1; }
+        .cert-name {
+          font-family: 'Syne', sans-serif;
+          font-size: 12px; font-weight: 700;
+          color: #fff; line-height: 1.2;
+        }
+        .cert-org { font-size: 10px; color: rgba(255,255,255,0.4); margin-top: 2px; }
+        .cert-year {
+          font-family: 'Syne', sans-serif;
+          font-size: 13px; font-weight: 800;
+          color: rgba(255,255,255,0.2);
+        }
+      </style>
+      <div class="wrap">
+        <div class="cert c1">
+          <div class="cert-icon">🏆</div>
+          <div class="cert-info">
+            <div class="cert-name">Certified ScrumMaster® (CSM®)</div>
+            <div class="cert-org">Scrum Alliance</div>
+          </div>
+          <div class="cert-year">2019</div>
+        </div>
+        <div class="cert c2">
+          <div class="cert-icon">🎓</div>
+          <div class="cert-info">
+            <div class="cert-name">PMP® Certification Training</div>
+            <div class="cert-org">Simplilearn</div>
+          </div>
+          <div class="cert-year">2019</div>
+        </div>
+        <div class="cert c3">
+          <div class="cert-icon">📜</div>
+          <div class="cert-info">
+            <div class="cert-name">Scrum Foundations Professional (SFPC)</div>
+            <div class="cert-org">CertiProf</div>
+          </div>
+          <div class="cert-year">2020</div>
+        </div>
+      </div>
+    </div>
+  </foreignObject>
+</svg>

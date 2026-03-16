@@ -1,0 +1,113 @@
+<svg fill="none" viewBox="0 0 900 200" width="900" height="200" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        .wrap {
+          width: 900px;
+          height: 200px;
+          background: linear-gradient(180deg, #0d0d1a 0%, #0a1628 100%);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 16px;
+          padding: 16px 24px;
+          font-family: 'DM Sans', sans-serif;
+          overflow: hidden;
+          position: relative;
+        }
+
+        .section-label {
+          font-family: 'Syne', sans-serif;
+          font-size: 10px;
+          font-weight: 700;
+          letter-spacing: 4px;
+          text-transform: uppercase;
+          color: rgba(255,255,255,0.3);
+        }
+
+        .row { display: flex; gap: 10px; flex-wrap: nowrap; }
+
+        .chip {
+          display: inline-flex;
+          align-items: center;
+          gap: 7px;
+          padding: 8px 16px;
+          border-radius: 100px;
+          font-size: 12px;
+          font-weight: 500;
+          border: 1px solid rgba(255,255,255,0.1);
+          background: rgba(255,255,255,0.04);
+          color: rgba(255,255,255,0.75);
+          backdrop-filter: blur(10px);
+          white-space: nowrap;
+          animation: popIn 0.5s cubic-bezier(0.34,1.56,0.64,1) both;
+          transition: all 0.3s ease;
+        }
+
+        .chip:hover {
+          background: rgba(255,255,255,0.1);
+          border-color: rgba(255,255,255,0.25);
+          transform: translateY(-2px);
+          box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+
+        .dot {
+          width: 7px;
+          height: 7px;
+          border-radius: 50%;
+          flex-shrink: 0;
+        }
+
+        /* Colors */
+        .purple  { border-color: rgba(124,58,237,0.4); }
+        .purple .dot  { background: #a78bfa; box-shadow: 0 0 6px #7c3aed; }
+        .cyan    { border-color: rgba(6,182,212,0.4); }
+        .cyan .dot    { background: #67e8f9; box-shadow: 0 0 6px #06b6d4; }
+        .green   { border-color: rgba(16,185,129,0.4); }
+        .green .dot   { background: #6ee7b7; box-shadow: 0 0 6px #10b981; }
+        .pink    { border-color: rgba(236,72,153,0.4); }
+        .pink .dot    { background: #f9a8d4; box-shadow: 0 0 6px #ec4899; }
+        .orange  { border-color: rgba(249,115,22,0.4); }
+        .orange .dot  { background: #fdba74; box-shadow: 0 0 6px #f97316; }
+        .blue    { border-color: rgba(59,130,246,0.4); }
+        .blue .dot    { background: #93c5fd; box-shadow: 0 0 6px #3b82f6; }
+
+        @keyframes popIn {
+          from { opacity: 0; transform: scale(0.8) translateY(10px); }
+          to   { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        .chip:nth-child(1) { animation-delay: 0.05s; }
+        .chip:nth-child(2) { animation-delay: 0.1s; }
+        .chip:nth-child(3) { animation-delay: 0.15s; }
+        .chip:nth-child(4) { animation-delay: 0.2s; }
+        .chip:nth-child(5) { animation-delay: 0.25s; }
+        .chip:nth-child(6) { animation-delay: 0.3s; }
+        .chip:nth-child(7) { animation-delay: 0.35s; }
+      </style>
+
+      <div class="wrap">
+        <div class="section-label">Core Stack &amp; Capabilities</div>
+        <div class="row">
+          <div class="chip purple"><span class="dot"></span>Agile · Scrumban · SAFe</div>
+          <div class="chip cyan"><span class="dot"></span>Jira · Confluence · Azure DevOps</div>
+          <div class="chip green"><span class="dot"></span>n8n Workflow Automation</div>
+          <div class="chip pink"><span class="dot"></span>GPT-4 · Claude · Gemini</div>
+          <div class="chip blue"><span class="dot"></span>Power BI · Salesforce</div>
+        </div>
+        <div class="row">
+          <div class="chip orange"><span class="dot"></span>PMO Architecture</div>
+          <div class="chip purple"><span class="dot"></span>Agile Coaching &amp; Transformation</div>
+          <div class="chip cyan"><span class="dot"></span>Change Management</div>
+          <div class="chip green"><span class="dot"></span>Prompt Engineering</div>
+          <div class="chip pink"><span class="dot"></span>Python · Excel · RAID Frameworks</div>
+        </div>
+      </div>
+    </div>
+  </foreignObject>
+</svg>
