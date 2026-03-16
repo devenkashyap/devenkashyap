@@ -34,7 +34,7 @@
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/devenkashyap)&nbsp;
 [![Profile Views](https://komarev.com/ghpvc/?username=devenkashyap&color=7c3aed&style=for-the-badge&label=PROFILE+VIEWS)](https://github.com/devenkashyap)
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=18&pause=1000&color=7C3AED&center=true&vCenter=true&random=false&width=700&lines=Diagnosing+dysfunction.+Designing+solutions.+Delivering+results.;8.5%2B+years+%7C+PMO+Architect+%7C+Agile+Coach+%7C+AI+Automation+Builder;Building+n8n+%2B+GenAI-powered+PM+workflows+in+2025)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=18&pause=1000&color=7C3AED&center=true&vCenter=true&random=false&width=700&lines=Diagnosing+dysfunction.+Designing+solutions.+Delivering+results.;Senior+Project+Manager+%7C+Senior+Scrum+Master+%7C+8.5%2B+Years;Agile+Coach+%7C+PMO+Architect+%7C+AI+Automation+Builder;Building+n8n+%2B+GenAI-powered+PM+workflows+in+2025)](https://git.io/typing-svg)
 
 </div>
 
