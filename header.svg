@@ -1,88 +1,96 @@
-<svg fill="none" viewBox="0 0 900 320" width="900" height="320" xmlns="http://www.w3.org/2000/svg">
+<svg fill="none" viewBox="0 0 900 300" width="900" height="300" xmlns="http://www.w3.org/2000/svg">
   <foreignObject width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
-        @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap');
-
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         .hero {
           width: 900px;
-          height: 320px;
-          background: linear-gradient(135deg, #0d0d1a 0%, #0f0a2e 40%, #0a1628 70%, #0d0d1a 100%);
+          height: 300px;
+          background: #0d0d1a;
           position: relative;
           overflow: hidden;
-          font-family: 'DM Sans', sans-serif;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
           display: flex;
           align-items: center;
-          padding: 0 50px;
+          padding: 0 44px;
         }
 
-        /* Animated orbs */
-        .orb {
+        .orb1 {
           position: absolute;
+          width: 300px; height: 300px;
           border-radius: 50%;
-          filter: blur(60px);
-          opacity: 0.35;
-          animation: drift 8s ease-in-out infinite alternate;
+          background: radial-gradient(circle, rgba(124,58,237,0.5), transparent 70%);
+          top: -100px; left: -80px;
+          filter: blur(40px);
+          animation: pulse 6s ease-in-out infinite alternate;
         }
-        .orb1 { width: 280px; height: 280px; background: radial-gradient(circle, #7c3aed, #4f46e5); top: -80px; left: -60px; animation-delay: 0s; }
-        .orb2 { width: 220px; height: 220px; background: radial-gradient(circle, #06b6d4, #0284c7); bottom: -60px; right: 200px; animation-delay: -3s; }
-        .orb3 { width: 160px; height: 160px; background: radial-gradient(circle, #a855f7, #ec4899); top: 30px; right: 100px; animation-delay: -6s; }
-
-        @keyframes drift {
-          0%   { transform: translate(0, 0) scale(1); }
-          100% { transform: translate(20px, 15px) scale(1.08); }
+        .orb2 {
+          position: absolute;
+          width: 260px; height: 260px;
+          border-radius: 50%;
+          background: radial-gradient(circle, rgba(6,182,212,0.4), transparent 70%);
+          bottom: -80px; right: 160px;
+          filter: blur(40px);
+          animation: pulse 8s ease-in-out infinite alternate-reverse;
+        }
+        .orb3 {
+          position: absolute;
+          width: 180px; height: 180px;
+          border-radius: 50%;
+          background: radial-gradient(circle, rgba(236,72,153,0.35), transparent 70%);
+          top: 20px; right: 80px;
+          filter: blur(35px);
+          animation: pulse 5s ease-in-out infinite alternate;
         }
 
-        /* Grid pattern */
+        @keyframes pulse {
+          0%   { transform: scale(1) translate(0,0); opacity: 0.8; }
+          100% { transform: scale(1.15) translate(12px, 8px); opacity: 1; }
+        }
+
         .grid {
           position: absolute;
           inset: 0;
           background-image:
-            linear-gradient(rgba(124,58,237,0.08) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(124,58,237,0.08) 1px, transparent 1px);
+            linear-gradient(rgba(124,58,237,0.07) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(124,58,237,0.07) 1px, transparent 1px);
           background-size: 40px 40px;
         }
 
-        /* Glass card */
-        .glass-card {
+        .card {
           position: relative;
           z-index: 10;
+          display: flex;
+          align-items: center;
+          gap: 36px;
+          width: 100%;
           background: rgba(255,255,255,0.04);
           border: 1px solid rgba(255,255,255,0.1);
           border-radius: 20px;
-          backdrop-filter: blur(20px);
-          padding: 32px 40px;
-          width: 100%;
-          display: flex;
-          align-items: center;
-          gap: 40px;
-          box-shadow:
-            0 0 0 1px rgba(124,58,237,0.15),
-            0 20px 60px rgba(0,0,0,0.4),
-            inset 0 1px 0 rgba(255,255,255,0.08);
-          animation: fadeUp 1s ease-out forwards;
+          padding: 28px 36px;
+          box-shadow: 0 0 0 1px rgba(124,58,237,0.12), 0 24px 64px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.07);
+          animation: fadeUp 0.8s ease-out forwards;
           opacity: 0;
-          transform: translateY(20px);
+          transform: translateY(16px);
         }
 
         @keyframes fadeUp {
           to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Avatar ring */
-        .avatar-ring {
+        .avatar {
           flex-shrink: 0;
-          width: 110px;
-          height: 110px;
+          width: 100px;
+          height: 100px;
           border-radius: 50%;
-          background: linear-gradient(135deg, #7c3aed, #06b6d4, #ec4899);
-          padding: 3px;
-          animation: spin-ring 6s linear infinite;
+          background: linear-gradient(135deg, #7c3aed, #06b6d4);
+          padding: 2.5px;
+          animation: spinBorder 4s linear infinite;
         }
-        @keyframes spin-ring {
-          0%   { background: linear-gradient(0deg, #7c3aed, #06b6d4, #ec4899); }
+
+        @keyframes spinBorder {
+          0%   { background: linear-gradient(0deg,   #7c3aed, #06b6d4, #ec4899); }
           33%  { background: linear-gradient(120deg, #06b6d4, #ec4899, #7c3aed); }
           66%  { background: linear-gradient(240deg, #ec4899, #7c3aed, #06b6d4); }
           100% { background: linear-gradient(360deg, #7c3aed, #06b6d4, #ec4899); }
@@ -92,170 +100,160 @@
           width: 100%;
           height: 100%;
           border-radius: 50%;
-          background: linear-gradient(135deg, #1e1040, #0f172a);
+          background: #130f2a;
           display: flex;
           align-items: center;
           justify-content: center;
-          font-family: 'Syne', sans-serif;
-          font-size: 36px;
-          font-weight: 800;
+          font-size: 30px;
+          font-weight: 900;
           color: #fff;
           letter-spacing: -1px;
         }
 
-        /* Content */
-        .content { flex: 1; }
+        .body { flex: 1; min-width: 0; }
 
-        .greeting {
-          font-size: 12px;
-          font-weight: 500;
-          letter-spacing: 3px;
+        .eyebrow {
+          font-size: 10px;
+          font-weight: 600;
+          letter-spacing: 3.5px;
           text-transform: uppercase;
           color: #06b6d4;
-          margin-bottom: 6px;
-          animation: fadeUp 1s ease-out 0.2s forwards;
+          margin-bottom: 7px;
+          animation: fadeUp 0.8s ease-out 0.15s forwards;
           opacity: 0;
         }
 
         .name {
-          font-family: 'Syne', sans-serif;
-          font-size: 42px;
-          font-weight: 800;
-          color: #ffffff;
+          font-size: 40px;
+          font-weight: 900;
+          color: #fff;
           line-height: 1;
           margin-bottom: 8px;
           letter-spacing: -1.5px;
-          animation: fadeUp 1s ease-out 0.3s forwards;
+          animation: fadeUp 0.8s ease-out 0.22s forwards;
           opacity: 0;
         }
 
-        .name span {
-          background: linear-gradient(90deg, #a78bfa, #06b6d4);
+        .name-accent {
+          background: linear-gradient(90deg, #a78bfa, #67e8f9);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
         }
 
-        .title {
-          font-size: 14px;
-          color: rgba(255,255,255,0.55);
+        .subtitle {
+          font-size: 13px;
+          color: rgba(255,255,255,0.5);
           font-weight: 400;
-          margin-bottom: 18px;
-          animation: fadeUp 1s ease-out 0.4s forwards;
+          margin-bottom: 16px;
+          animation: fadeUp 0.8s ease-out 0.3s forwards;
           opacity: 0;
         }
 
-        /* Pills */
-        .pills {
+        .tags {
           display: flex;
           gap: 8px;
           flex-wrap: wrap;
-          animation: fadeUp 1s ease-out 0.5s forwards;
+          animation: fadeUp 0.8s ease-out 0.38s forwards;
           opacity: 0;
         }
 
-        .pill {
-          padding: 5px 14px;
+        .tag {
+          padding: 4px 12px;
           border-radius: 100px;
           font-size: 11px;
-          font-weight: 500;
+          font-weight: 600;
           letter-spacing: 0.3px;
           border: 1px solid;
         }
-        .pill-purple { background: rgba(124,58,237,0.15); border-color: rgba(124,58,237,0.4); color: #a78bfa; }
-        .pill-cyan   { background: rgba(6,182,212,0.12);  border-color: rgba(6,182,212,0.35); color: #67e8f9; }
-        .pill-pink   { background: rgba(236,72,153,0.12); border-color: rgba(236,72,153,0.35); color: #f9a8d4; }
+        .t1 { background: rgba(124,58,237,0.15); border-color: rgba(124,58,237,0.45); color: #c4b5fd; }
+        .t2 { background: rgba(6,182,212,0.12);  border-color: rgba(6,182,212,0.4);  color: #67e8f9; }
+        .t3 { background: rgba(236,72,153,0.12); border-color: rgba(236,72,153,0.4); color: #f9a8d4; }
 
-        /* Stats column */
         .stats {
           flex-shrink: 0;
           display: flex;
           flex-direction: column;
-          gap: 14px;
+          gap: 16px;
           border-left: 1px solid rgba(255,255,255,0.08);
-          padding-left: 36px;
-          animation: fadeUp 1s ease-out 0.6s forwards;
+          padding-left: 32px;
+          animation: fadeUp 0.8s ease-out 0.45s forwards;
           opacity: 0;
         }
 
-        .stat-item { text-align: center; }
+        .stat { text-align: center; }
 
-        .stat-number {
-          font-family: 'Syne', sans-serif;
-          font-size: 28px;
-          font-weight: 800;
-          color: #fff;
+        .snum {
+          font-size: 26px;
+          font-weight: 900;
           line-height: 1;
           letter-spacing: -1px;
         }
+        .s1 { color: #a78bfa; }
+        .s2 { color: #67e8f9; }
+        .s3 { color: #f9a8d4; }
 
-        .stat-number.purple { color: #a78bfa; }
-        .stat-number.cyan   { color: #67e8f9; }
-        .stat-number.pink   { color: #f9a8d4; }
-
-        .stat-label {
+        .slabel {
           font-size: 9px;
+          font-weight: 600;
           letter-spacing: 1.5px;
           text-transform: uppercase;
-          color: rgba(255,255,255,0.35);
-          margin-top: 2px;
+          color: rgba(255,255,255,0.3);
+          margin-top: 3px;
         }
 
-        /* Glowing border line */
-        .glow-line {
+        .glow-bar {
           position: absolute;
-          bottom: 0;
-          left: 0;
-          right: 0;
+          bottom: 0; left: 0; right: 0;
           height: 2px;
-          background: linear-gradient(90deg, transparent, #7c3aed, #06b6d4, #ec4899, transparent);
-          animation: shimmer 3s linear infinite;
+          background: linear-gradient(90deg, transparent 0%, #7c3aed 25%, #06b6d4 50%, #ec4899 75%, transparent 100%);
+          animation: shimmer 3s ease-in-out infinite;
         }
+
         @keyframes shimmer {
-          0%   { opacity: 0.4; }
-          50%  { opacity: 1; }
-          100% { opacity: 0.4; }
+          0%, 100% { opacity: 0.4; }
+          50%       { opacity: 1; }
         }
       </style>
 
       <div class="hero">
         <div class="grid"></div>
-        <div class="orb orb1"></div>
-        <div class="orb orb2"></div>
-        <div class="orb orb3"></div>
+        <div class="orb1"></div>
+        <div class="orb2"></div>
+        <div class="orb3"></div>
 
-        <div class="glass-card">
-          <div class="avatar-ring">
+        <div class="card">
+          <div class="avatar">
             <div class="avatar-inner">DK</div>
           </div>
 
-          <div class="content">
-            <div class="greeting">Senior Program Manager · India</div>
-            <div class="name">Deven <span>Kashyap</span></div>
-            <div class="title">Agile Transformation Leader &nbsp;·&nbsp; PMO Architect &nbsp;·&nbsp; AI Automation Builder</div>
-            <div class="pills">
-              <span class="pill pill-purple">8.5+ Years</span>
-              <span class="pill pill-cyan">Agile · PMO · AI/n8n</span>
-              <span class="pill pill-pink">Banking · Healthcare · SaaS</span>
+          <div class="body">
+            <div class="eyebrow">Senior Program Manager · Mohali, India</div>
+            <div class="name">Deven <span class="name-accent">Kashyap</span></div>
+            <div class="subtitle">Agile Transformation Leader &nbsp;·&nbsp; PMO Architect &nbsp;·&nbsp; AI Automation Builder</div>
+            <div class="tags">
+              <span class="tag t1">8.5+ Years</span>
+              <span class="tag t2">Agile · PMO · n8n · GenAI</span>
+              <span class="tag t3">Banking · Healthcare · SaaS</span>
             </div>
           </div>
 
           <div class="stats">
-            <div class="stat-item">
-              <div class="stat-number purple">60+</div>
-              <div class="stat-label">People Led</div>
+            <div class="stat">
+              <div class="snum s1">60+</div>
+              <div class="slabel">People Led</div>
             </div>
-            <div class="stat-item">
-              <div class="stat-number cyan">2M+</div>
-              <div class="stat-label">Customers Impacted</div>
+            <div class="stat">
+              <div class="snum s2">2M+</div>
+              <div class="slabel">Customers</div>
             </div>
-            <div class="stat-item">
-              <div class="stat-number pink">12</div>
-              <div class="stat-label">Teams Transformed</div>
+            <div class="stat">
+              <div class="snum s3">12</div>
+              <div class="slabel">Teams Transformed</div>
             </div>
           </div>
 
-          <div class="glow-line"></div>
+          <div class="glow-bar"></div>
         </div>
       </div>
     </div>
