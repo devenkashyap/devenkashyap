@@ -1,79 +1,38 @@
-<svg fill="none" viewBox="0 0 900 95" width="900" height="95" xmlns="http://www.w3.org/2000/svg">
-  <foreignObject width="100%" height="100%">
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        .wrap {
-          width: 900px; height: 95px;
-          background: linear-gradient(135deg, #0d0d1a 0%, #0f0a2e 100%);
-          display: flex; align-items: center;
-          justify-content: center; gap: 12px;
-          padding: 12px 22px;
-          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
-          overflow: hidden;
-        }
-        .cert {
-          display: flex; align-items: center; gap: 10px;
-          background: rgba(255,255,255,0.04);
-          border: 1px solid rgba(255,255,255,0.09);
-          border-radius: 12px;
-          padding: 10px 16px; flex: 1;
-          position: relative; overflow: hidden;
-          box-shadow: 0 2px 12px rgba(0,0,0,0.2);
-          animation: fadeIn 0.6s ease both;
-        }
-        .cert::before {
-          content: ''; position: absolute;
-          top: 0; left: 0; bottom: 0; width: 3px;
-        }
-        .c1::before { background: linear-gradient(180deg, #7c3aed, #a855f7); }
-        .c2::before { background: linear-gradient(180deg, #06b6d4, #0284c7); }
-        .c3::before { background: linear-gradient(180deg, #10b981, #059669); }
-        .cert:nth-child(1) { animation-delay: 0.08s; }
-        .cert:nth-child(2) { animation-delay: 0.16s; }
-        .cert:nth-child(3) { animation-delay: 0.24s; }
-        @keyframes fadeIn {
-          from { opacity: 0; transform: scale(0.94); }
-          to   { opacity: 1; transform: scale(1); }
-        }
-        .icon { font-size: 20px; flex-shrink: 0; }
-        .info { flex: 1; }
-        .cname {
-          font-size: 11.5px; font-weight: 700;
-          color: #f1f5f9; line-height: 1.25;
-        }
-        .org { font-size: 10px; color: rgba(255,255,255,0.38); margin-top: 2px; }
-        .year {
-          font-size: 12px; font-weight: 800;
-          color: rgba(255,255,255,0.18);
-        }
-      </style>
-      <div class="wrap">
-        <div class="cert c1">
-          <div class="icon">🏆</div>
-          <div class="info">
-            <div class="cname">Certified ScrumMaster® (CSM®)</div>
-            <div class="org">Scrum Alliance</div>
-          </div>
-          <div class="year">2019</div>
-        </div>
-        <div class="cert c2">
-          <div class="icon">🎓</div>
-          <div class="info">
-            <div class="cname">PMP® Certification Training</div>
-            <div class="org">Simplilearn</div>
-          </div>
-          <div class="year">2019</div>
-        </div>
-        <div class="cert c3">
-          <div class="icon">📜</div>
-          <div class="info">
-            <div class="cname">Scrum Foundations Professional (SFPC)</div>
-            <div class="org">CertiProf</div>
-          </div>
-          <div class="year">2020</div>
-        </div>
-      </div>
-    </div>
-  </foreignObject>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 90" width="900" height="90">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0d1a"/>
+      <stop offset="100%" style="stop-color:#0f0a2e"/>
+    </linearGradient>
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.05"/>
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.02"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="90" fill="url(#bg)"/>
+
+  <!-- Card 1: CSM -->
+  <rect x="10" y="10" width="272" height="70" rx="12" fill="url(#cardBg)" stroke="#ffffff" stroke-width="1" stroke-opacity="0.08"/>
+  <rect x="10" y="10" width="4" height="70" rx="2" fill="#7c3aed"/>
+  <text x="28" y="38" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="18" fill="#94a3b8">🏆</text>
+  <text x="55" y="36" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="12" font-weight="700" fill="#f1f5f9">Certified ScrumMaster® (CSM®)</text>
+  <text x="55" y="52" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="10" font-weight="400" fill="#475569">Scrum Alliance</text>
+  <text x="55" y="67" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="10" font-weight="400" fill="#334155">Jan 2019</text>
+
+  <!-- Card 2: PMP -->
+  <rect x="314" y="10" width="272" height="70" rx="12" fill="url(#cardBg)" stroke="#ffffff" stroke-width="1" stroke-opacity="0.08"/>
+  <rect x="314" y="10" width="4" height="70" rx="2" fill="#06b6d4"/>
+  <text x="332" y="38" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="18" fill="#94a3b8">🎓</text>
+  <text x="358" y="36" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="12" font-weight="700" fill="#f1f5f9">PMP® Certification Training</text>
+  <text x="358" y="52" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="10" font-weight="400" fill="#475569">Simplilearn</text>
+  <text x="358" y="67" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="10" font-weight="400" fill="#334155">Feb 2019</text>
+
+  <!-- Card 3: SFPC -->
+  <rect x="618" y="10" width="272" height="70" rx="12" fill="url(#cardBg)" stroke="#ffffff" stroke-width="1" stroke-opacity="0.08"/>
+  <rect x="618" y="10" width="4" height="70" rx="2" fill="#10b981"/>
+  <text x="636" y="38" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="18" fill="#94a3b8">📜</text>
+  <text x="662" y="36" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="12" font-weight="700" fill="#f1f5f9">Scrum Foundations Professional</text>
+  <text x="662" y="52" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="10" font-weight="400" fill="#475569">CertiProf · SFPC</text>
+  <text x="662" y="67" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="10" font-weight="400" fill="#334155">Jun 2020</text>
 </svg>

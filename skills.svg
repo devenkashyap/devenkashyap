@@ -1,74 +1,81 @@
-<svg fill="none" viewBox="0 0 900 190" width="900" height="190" xmlns="http://www.w3.org/2000/svg">
-  <foreignObject width="100%" height="100%">
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        .wrap {
-          width: 900px; height: 190px;
-          background: linear-gradient(180deg, #0d0d1a 0%, #0a1628 100%);
-          display: flex; flex-direction: column;
-          align-items: center; justify-content: center;
-          gap: 14px; padding: 16px 24px;
-          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
-          overflow: hidden;
-        }
-        .label {
-          font-size: 9px; font-weight: 700;
-          letter-spacing: 4px; text-transform: uppercase;
-          color: rgba(255,255,255,0.25);
-        }
-        .row { display: flex; gap: 9px; }
-        .chip {
-          display: inline-flex; align-items: center; gap: 7px;
-          padding: 7px 15px;
-          border-radius: 100px;
-          font-size: 11.5px; font-weight: 500;
-          border: 1px solid rgba(255,255,255,0.1);
-          background: rgba(255,255,255,0.04);
-          color: rgba(255,255,255,0.72);
-          white-space: nowrap;
-          animation: pop 0.4s cubic-bezier(0.34,1.56,0.64,1) both;
-        }
-        .chip:nth-child(1) { animation-delay: 0.04s; }
-        .chip:nth-child(2) { animation-delay: 0.09s; }
-        .chip:nth-child(3) { animation-delay: 0.14s; }
-        .chip:nth-child(4) { animation-delay: 0.19s; }
-        .chip:nth-child(5) { animation-delay: 0.24s; }
-        @keyframes pop {
-          from { opacity: 0; transform: scale(0.82) translateY(8px); }
-          to   { opacity: 1; transform: scale(1) translateY(0); }
-        }
-        .dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
-        .purple { border-color: rgba(124,58,237,0.4); }
-        .purple .dot { background: #a78bfa; box-shadow: 0 0 5px #7c3aed; }
-        .cyan   { border-color: rgba(6,182,212,0.4); }
-        .cyan   .dot { background: #67e8f9; box-shadow: 0 0 5px #06b6d4; }
-        .green  { border-color: rgba(16,185,129,0.4); }
-        .green  .dot { background: #6ee7b7; box-shadow: 0 0 5px #10b981; }
-        .pink   { border-color: rgba(236,72,153,0.4); }
-        .pink   .dot { background: #f9a8d4; box-shadow: 0 0 5px #ec4899; }
-        .orange { border-color: rgba(249,115,22,0.4); }
-        .orange .dot { background: #fdba74; box-shadow: 0 0 5px #f97316; }
-        .blue   { border-color: rgba(59,130,246,0.4); }
-        .blue   .dot { background: #93c5fd; box-shadow: 0 0 5px #3b82f6; }
-      </style>
-      <div class="wrap">
-        <div class="label">Core Stack &amp; Capabilities</div>
-        <div class="row">
-          <div class="chip purple"><span class="dot"></span>Agile · Scrumban · SAFe</div>
-          <div class="chip cyan"><span class="dot"></span>Jira · Confluence · Azure DevOps</div>
-          <div class="chip green"><span class="dot"></span>n8n Workflow Automation</div>
-          <div class="chip pink"><span class="dot"></span>GPT-4 · Claude · Gemini</div>
-          <div class="chip blue"><span class="dot"></span>Power BI · Salesforce</div>
-        </div>
-        <div class="row">
-          <div class="chip orange"><span class="dot"></span>PMO Architecture</div>
-          <div class="chip purple"><span class="dot"></span>Agile Coaching &amp; Transformation</div>
-          <div class="chip cyan"><span class="dot"></span>Change Management</div>
-          <div class="chip green"><span class="dot"></span>Prompt Engineering</div>
-          <div class="chip pink"><span class="dot"></span>Python · Excel · RAID Frameworks</div>
-        </div>
-      </div>
-    </div>
-  </foreignObject>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 170" width="900" height="170">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0d1a"/>
+      <stop offset="100%" style="stop-color:#0a1628"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="170" fill="url(#bg)"/>
+
+  <!-- Section label -->
+  <text x="450" y="26" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="9" font-weight="700" fill="#334155" letter-spacing="4">CORE STACK &amp; CAPABILITIES</text>
+
+  <!-- ROW 1 -->
+  <!-- Chip: Agile · Scrumban · SAFe -->
+  <rect x="36" y="38" width="168" height="28" rx="14" fill="#7c3aed" fill-opacity="0.15" stroke="#7c3aed" stroke-width="1" stroke-opacity="0.4"/>
+  <circle cx="56" cy="52" r="4" fill="#a78bfa" filter="drop-shadow(0 0 3px #7c3aed)"/>
+  <text x="68" y="57" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="12" font-weight="500" fill="#c4b5fd">Agile · Scrumban · SAFe</text>
+
+  <!-- Chip: Jira · Confluence · Azure DevOps -->
+  <rect x="214" y="38" width="200" height="28" rx="14" fill="#06b6d4" fill-opacity="0.12" stroke="#06b6d4" stroke-width="1" stroke-opacity="0.4"/>
+  <circle cx="234" cy="52" r="4" fill="#67e8f9" filter="drop-shadow(0 0 3px #06b6d4)"/>
+  <text x="246" y="57" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="12" font-weight="500" fill="#67e8f9">Jira · Confluence · Azure DevOps</text>
+
+  <!-- Chip: n8n Workflow Automation -->
+  <rect x="424" y="38" width="178" height="28" rx="14" fill="#10b981" fill-opacity="0.12" stroke="#10b981" stroke-width="1" stroke-opacity="0.4"/>
+  <circle cx="444" cy="52" r="4" fill="#6ee7b7" filter="drop-shadow(0 0 3px #10b981)"/>
+  <text x="456" y="57" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="12" font-weight="500" fill="#6ee7b7">n8n Workflow Automation</text>
+
+  <!-- Chip: GPT-4 · Claude · Gemini -->
+  <rect x="612" y="38" width="170" height="28" rx="14" fill="#ec4899" fill-opacity="0.12" stroke="#ec4899" stroke-width="1" stroke-opacity="0.4"/>
+  <circle cx="632" cy="52" r="4" fill="#f9a8d4" filter="drop-shadow(0 0 3px #ec4899)"/>
+  <text x="644" y="57" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="12" font-weight="500" fill="#f9a8d4">GPT-4 · Claude · Gemini</text>
+
+  <!-- ROW 2 -->
+  <!-- Chip: PMO Architecture -->
+  <rect x="36" y="82" width="142" height="28" rx="14" fill="#f97316" fill-opacity="0.12" stroke="#f97316" stroke-width="1" stroke-opacity="0.4"/>
+  <circle cx="56" cy="96" r="4" fill="#fdba74" filter="drop-shadow(0 0 3px #f97316)"/>
+  <text x="68" y="101" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="12" font-weight="500" fill="#fdba74">PMO Architecture</text>
+
+  <!-- Chip: Agile Coaching & Transformation -->
+  <rect x="188" y="82" width="212" height="28" rx="14" fill="#7c3aed" fill-opacity="0.15" stroke="#7c3aed" stroke-width="1" stroke-opacity="0.4"/>
+  <circle cx="208" cy="96" r="4" fill="#a78bfa" filter="drop-shadow(0 0 3px #7c3aed)"/>
+  <text x="220" y="101" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="12" font-weight="500" fill="#c4b5fd">Agile Coaching &amp; Transformation</text>
+
+  <!-- Chip: Change Management -->
+  <rect x="410" y="82" width="152" height="28" rx="14" fill="#06b6d4" fill-opacity="0.12" stroke="#06b6d4" stroke-width="1" stroke-opacity="0.4"/>
+  <circle cx="430" cy="96" r="4" fill="#67e8f9" filter="drop-shadow(0 0 3px #06b6d4)"/>
+  <text x="442" y="101" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="12" font-weight="500" fill="#67e8f9">Change Management</text>
+
+  <!-- Chip: Power BI · Salesforce -->
+  <rect x="572" y="82" width="152" height="28" rx="14" fill="#3b82f6" fill-opacity="0.12" stroke="#3b82f6" stroke-width="1" stroke-opacity="0.4"/>
+  <circle cx="592" cy="96" r="4" fill="#93c5fd" filter="drop-shadow(0 0 3px #3b82f6)"/>
+  <text x="604" y="101" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="12" font-weight="500" fill="#93c5fd">Power BI · Salesforce</text>
+
+  <!-- ROW 3 -->
+  <!-- Chip: Prompt Engineering -->
+  <rect x="36" y="126" width="152" height="28" rx="14" fill="#10b981" fill-opacity="0.12" stroke="#10b981" stroke-width="1" stroke-opacity="0.4"/>
+  <circle cx="56" cy="140" r="4" fill="#6ee7b7" filter="drop-shadow(0 0 3px #10b981)"/>
+  <text x="68" y="145" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="12" font-weight="500" fill="#6ee7b7">Prompt Engineering</text>
+
+  <!-- Chip: Python · Excel -->
+  <rect x="198" y="126" width="118" height="28" rx="14" fill="#f97316" fill-opacity="0.12" stroke="#f97316" stroke-width="1" stroke-opacity="0.4"/>
+  <circle cx="218" cy="140" r="4" fill="#fdba74" filter="drop-shadow(0 0 3px #f97316)"/>
+  <text x="230" y="145" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="12" font-weight="500" fill="#fdba74">Python · Excel</text>
+
+  <!-- Chip: RAID Frameworks -->
+  <rect x="326" y="126" width="142" height="28" rx="14" fill="#ec4899" fill-opacity="0.12" stroke="#ec4899" stroke-width="1" stroke-opacity="0.4"/>
+  <circle cx="346" cy="140" r="4" fill="#f9a8d4" filter="drop-shadow(0 0 3px #ec4899)"/>
+  <text x="358" y="145" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="12" font-weight="500" fill="#f9a8d4">RAID Frameworks</text>
+
+  <!-- Chip: Vendor Management -->
+  <rect x="478" y="126" width="158" height="28" rx="14" fill="#3b82f6" fill-opacity="0.12" stroke="#3b82f6" stroke-width="1" stroke-opacity="0.4"/>
+  <circle cx="498" cy="140" r="4" fill="#93c5fd" filter="drop-shadow(0 0 3px #3b82f6)"/>
+  <text x="510" y="145" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="12" font-weight="500" fill="#93c5fd">Vendor Management</text>
+
+  <!-- Chip: CSM · SAFe · SFPC -->
+  <rect x="646" y="126" width="148" height="28" rx="14" fill="#7c3aed" fill-opacity="0.15" stroke="#7c3aed" stroke-width="1" stroke-opacity="0.4"/>
+  <circle cx="666" cy="140" r="4" fill="#a78bfa" filter="drop-shadow(0 0 3px #7c3aed)"/>
+  <text x="678" y="145" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="12" font-weight="500" fill="#c4b5fd">CSM · SAFe · SFPC</text>
 </svg>

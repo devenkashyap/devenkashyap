@@ -1,261 +1,183 @@
-<svg fill="none" viewBox="0 0 900 300" width="900" height="300" xmlns="http://www.w3.org/2000/svg">
-  <foreignObject width="100%" height="100%">
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280" width="900" height="280">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0d1a"/>
+      <stop offset="45%" style="stop-color:#0f0a2e"/>
+      <stop offset="100%" style="stop-color:#0a1628"/>
+    </linearGradient>
 
-        .hero {
-          width: 900px;
-          height: 300px;
-          background: #0d0d1a;
-          position: relative;
-          overflow: hidden;
-          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
-          display: flex;
-          align-items: center;
-          padding: 0 44px;
-        }
+    <!-- Orb gradients -->
+    <radialGradient id="orb1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:0.55"/>
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0"/>
+    </radialGradient>
+    <radialGradient id="orb2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.45"/>
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:0"/>
+    </radialGradient>
+    <radialGradient id="orb3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ec4899;stop-opacity:0.38"/>
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:0"/>
+    </radialGradient>
 
-        .orb1 {
-          position: absolute;
-          width: 300px; height: 300px;
-          border-radius: 50%;
-          background: radial-gradient(circle, rgba(124,58,237,0.5), transparent 70%);
-          top: -100px; left: -80px;
-          filter: blur(40px);
-          animation: pulse 6s ease-in-out infinite alternate;
-        }
-        .orb2 {
-          position: absolute;
-          width: 260px; height: 260px;
-          border-radius: 50%;
-          background: radial-gradient(circle, rgba(6,182,212,0.4), transparent 70%);
-          bottom: -80px; right: 160px;
-          filter: blur(40px);
-          animation: pulse 8s ease-in-out infinite alternate-reverse;
-        }
-        .orb3 {
-          position: absolute;
-          width: 180px; height: 180px;
-          border-radius: 50%;
-          background: radial-gradient(circle, rgba(236,72,153,0.35), transparent 70%);
-          top: 20px; right: 80px;
-          filter: blur(35px);
-          animation: pulse 5s ease-in-out infinite alternate;
-        }
+    <!-- Card glass effect -->
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.06"/>
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.02"/>
+    </linearGradient>
 
-        @keyframes pulse {
-          0%   { transform: scale(1) translate(0,0); opacity: 0.8; }
-          100% { transform: scale(1.15) translate(12px, 8px); opacity: 1; }
-        }
+    <!-- Name gradient -->
+    <linearGradient id="nameGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#c4b5fd"/>
+      <stop offset="100%" style="stop-color:#67e8f9"/>
+    </linearGradient>
 
-        .grid {
-          position: absolute;
-          inset: 0;
-          background-image:
-            linear-gradient(rgba(124,58,237,0.07) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(124,58,237,0.07) 1px, transparent 1px);
-          background-size: 40px 40px;
-        }
+    <!-- Bottom glow bar -->
+    <linearGradient id="glowBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:0"/>
+      <stop offset="25%" style="stop-color:#7c3aed;stop-opacity:1"/>
+      <stop offset="50%" style="stop-color:#06b6d4;stop-opacity:1"/>
+      <stop offset="75%" style="stop-color:#ec4899;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:0"/>
+    </linearGradient>
 
-        .card {
-          position: relative;
-          z-index: 10;
-          display: flex;
-          align-items: center;
-          gap: 36px;
-          width: 100%;
-          background: rgba(255,255,255,0.04);
-          border: 1px solid rgba(255,255,255,0.1);
-          border-radius: 20px;
-          padding: 28px 36px;
-          box-shadow: 0 0 0 1px rgba(124,58,237,0.12), 0 24px 64px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.07);
-          animation: fadeUp 0.8s ease-out forwards;
-          opacity: 0;
-          transform: translateY(16px);
-        }
+    <!-- Avatar ring gradient -->
+    <linearGradient id="avatarRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed"/>
+      <stop offset="50%" style="stop-color:#06b6d4"/>
+      <stop offset="100%" style="stop-color:#ec4899"/>
+    </linearGradient>
 
-        @keyframes fadeUp {
-          to { opacity: 1; transform: translateY(0); }
-        }
+    <!-- Avatar inner -->
+    <linearGradient id="avatarInner" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1040"/>
+      <stop offset="100%" style="stop-color:#0f172a"/>
+    </linearGradient>
 
-        .avatar {
-          flex-shrink: 0;
-          width: 100px;
-          height: 100px;
-          border-radius: 50%;
-          background: linear-gradient(135deg, #7c3aed, #06b6d4);
-          padding: 2.5px;
-          animation: spinBorder 4s linear infinite;
-        }
+    <!-- Stat number gradients -->
+    <linearGradient id="statPurple" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#c4b5fd"/>
+      <stop offset="100%" style="stop-color:#a78bfa"/>
+    </linearGradient>
+    <linearGradient id="statCyan" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#a5f3fc"/>
+      <stop offset="100%" style="stop-color:#67e8f9"/>
+    </linearGradient>
+    <linearGradient id="statPink" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbcfe8"/>
+      <stop offset="100%" style="stop-color:#f9a8d4"/>
+    </linearGradient>
 
-        @keyframes spinBorder {
-          0%   { background: linear-gradient(0deg,   #7c3aed, #06b6d4, #ec4899); }
-          33%  { background: linear-gradient(120deg, #06b6d4, #ec4899, #7c3aed); }
-          66%  { background: linear-gradient(240deg, #ec4899, #7c3aed, #06b6d4); }
-          100% { background: linear-gradient(360deg, #7c3aed, #06b6d4, #ec4899); }
-        }
+    <filter id="blur1">
+      <feGaussianBlur stdDeviation="35"/>
+    </filter>
+    <filter id="blur2">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+  </defs>
 
-        .avatar-inner {
-          width: 100%;
-          height: 100%;
-          border-radius: 50%;
-          background: #130f2a;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 30px;
-          font-weight: 900;
-          color: #fff;
-          letter-spacing: -1px;
-        }
+  <!-- Background -->
+  <rect width="900" height="280" fill="url(#bg)"/>
 
-        .body { flex: 1; min-width: 0; }
+  <!-- Grid pattern -->
+  <g opacity="0.07">
+    <line x1="0" y1="40" x2="900" y2="40" stroke="#7c3aed" stroke-width="0.5"/>
+    <line x1="0" y1="80" x2="900" y2="80" stroke="#7c3aed" stroke-width="0.5"/>
+    <line x1="0" y1="120" x2="900" y2="120" stroke="#7c3aed" stroke-width="0.5"/>
+    <line x1="0" y1="160" x2="900" y2="160" stroke="#7c3aed" stroke-width="0.5"/>
+    <line x1="0" y1="200" x2="900" y2="200" stroke="#7c3aed" stroke-width="0.5"/>
+    <line x1="0" y1="240" x2="900" y2="240" stroke="#7c3aed" stroke-width="0.5"/>
+    <line x1="40" y1="0" x2="40" y2="280" stroke="#7c3aed" stroke-width="0.5"/>
+    <line x1="80" y1="0" x2="80" y2="280" stroke="#7c3aed" stroke-width="0.5"/>
+    <line x1="120" y1="0" x2="120" y2="280" stroke="#7c3aed" stroke-width="0.5"/>
+    <line x1="160" y1="0" x2="160" y2="280" stroke="#7c3aed" stroke-width="0.5"/>
+    <line x1="200" y1="0" x2="200" y2="280" stroke="#7c3aed" stroke-width="0.5"/>
+    <line x1="240" y1="0" x2="240" y2="280" stroke="#7c3aed" stroke-width="0.5"/>
+    <line x1="280" y1="0" x2="280" y2="280" stroke="#7c3aed" stroke-width="0.5"/>
+    <line x1="320" y1="0" x2="320" y2="280" stroke="#7c3aed" stroke-width="0.5"/>
+    <line x1="360" y1="0" x2="360" y2="280" stroke="#7c3aed" stroke-width="0.5"/>
+    <line x1="400" y1="0" x2="400" y2="280" stroke="#7c3aed" stroke-width="0.5"/>
+    <line x1="440" y1="0" x2="440" y2="280" stroke="#7c3aed" stroke-width="0.5"/>
+    <line x1="480" y1="0" x2="480" y2="280" stroke="#7c3aed" stroke-width="0.5"/>
+    <line x1="520" y1="0" x2="520" y2="280" stroke="#7c3aed" stroke-width="0.5"/>
+    <line x1="560" y1="0" x2="560" y2="280" stroke="#7c3aed" stroke-width="0.5"/>
+    <line x1="600" y1="0" x2="600" y2="280" stroke="#7c3aed" stroke-width="0.5"/>
+    <line x1="640" y1="0" x2="640" y2="280" stroke="#7c3aed" stroke-width="0.5"/>
+    <line x1="680" y1="0" x2="680" y2="280" stroke="#7c3aed" stroke-width="0.5"/>
+    <line x1="720" y1="0" x2="720" y2="280" stroke="#7c3aed" stroke-width="0.5"/>
+    <line x1="760" y1="0" x2="760" y2="280" stroke="#7c3aed" stroke-width="0.5"/>
+    <line x1="800" y1="0" x2="800" y2="280" stroke="#7c3aed" stroke-width="0.5"/>
+    <line x1="840" y1="0" x2="840" y2="280" stroke="#7c3aed" stroke-width="0.5"/>
+    <line x1="880" y1="0" x2="880" y2="280" stroke="#7c3aed" stroke-width="0.5"/>
+  </g>
 
-        .eyebrow {
-          font-size: 10px;
-          font-weight: 600;
-          letter-spacing: 3.5px;
-          text-transform: uppercase;
-          color: #06b6d4;
-          margin-bottom: 7px;
-          animation: fadeUp 0.8s ease-out 0.15s forwards;
-          opacity: 0;
-        }
+  <!-- Ambient orbs -->
+  <ellipse cx="60" cy="60" rx="200" ry="200" fill="url(#orb1)" filter="url(#blur1)">
+    <animate attributeName="rx" values="200;220;200" dur="7s" repeatCount="indefinite"/>
+    <animate attributeName="ry" values="200;215;200" dur="7s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="720" cy="220" rx="160" ry="160" fill="url(#orb2)" filter="url(#blur2)">
+    <animate attributeName="rx" values="160;180;160" dur="9s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="820" cy="50" rx="120" ry="120" fill="url(#orb3)" filter="url(#blur2)">
+    <animate attributeName="ry" values="120;140;120" dur="5s" repeatCount="indefinite"/>
+  </ellipse>
 
-        .name {
-          font-size: 40px;
-          font-weight: 900;
-          color: #fff;
-          line-height: 1;
-          margin-bottom: 8px;
-          letter-spacing: -1.5px;
-          animation: fadeUp 0.8s ease-out 0.22s forwards;
-          opacity: 0;
-        }
+  <!-- Card background -->
+  <rect x="24" y="24" width="852" height="232" rx="18" fill="url(#cardBg)"/>
+  <rect x="24" y="24" width="852" height="232" rx="18" fill="none" stroke="#ffffff" stroke-width="1" stroke-opacity="0.1"/>
+  <!-- Card inner top highlight -->
+  <rect x="25" y="25" width="850" height="1" rx="1" fill="#ffffff" fill-opacity="0.08"/>
 
-        .name-accent {
-          background: linear-gradient(90deg, #a78bfa, #67e8f9);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-clip: text;
-        }
+  <!-- Avatar ring (circle) -->
+  <circle cx="116" cy="140" r="52" fill="url(#avatarRing)">
+    <animateTransform attributeName="transform" type="rotate" from="0 116 140" to="360 116 140" dur="6s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Avatar inner circle -->
+  <circle cx="116" cy="140" r="48" fill="url(#avatarInner)"/>
+  <!-- Avatar initials -->
+  <text x="116" y="150" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="26" font-weight="900" fill="white" letter-spacing="-1">DK</text>
 
-        .subtitle {
-          font-size: 13px;
-          color: rgba(255,255,255,0.5);
-          font-weight: 400;
-          margin-bottom: 16px;
-          animation: fadeUp 0.8s ease-out 0.3s forwards;
-          opacity: 0;
-        }
+  <!-- Eyebrow text -->
+  <text x="196" y="82" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#06b6d4" letter-spacing="3" text-transform="uppercase">SENIOR PROGRAM MANAGER · MOHALI, INDIA</text>
 
-        .tags {
-          display: flex;
-          gap: 8px;
-          flex-wrap: wrap;
-          animation: fadeUp 0.8s ease-out 0.38s forwards;
-          opacity: 0;
-        }
+  <!-- Name — "Deven" in white, "Kashyap" in gradient -->
+  <text x="196" y="130" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="42" font-weight="900" fill="white" letter-spacing="-2">Deven</text>
+  <text x="345" y="130" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="42" font-weight="900" fill="url(#nameGrad)" letter-spacing="-2"> Kashyap</text>
 
-        .tag {
-          padding: 4px 12px;
-          border-radius: 100px;
-          font-size: 11px;
-          font-weight: 600;
-          letter-spacing: 0.3px;
-          border: 1px solid;
-        }
-        .t1 { background: rgba(124,58,237,0.15); border-color: rgba(124,58,237,0.45); color: #c4b5fd; }
-        .t2 { background: rgba(6,182,212,0.12);  border-color: rgba(6,182,212,0.4);  color: #67e8f9; }
-        .t3 { background: rgba(236,72,153,0.12); border-color: rgba(236,72,153,0.4); color: #f9a8d4; }
+  <!-- Subtitle -->
+  <text x="196" y="158" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="13" font-weight="400" fill="#94a3b8">Agile Transformation Leader  ·  PMO Architect  ·  AI Automation Builder</text>
 
-        .stats {
-          flex-shrink: 0;
-          display: flex;
-          flex-direction: column;
-          gap: 16px;
-          border-left: 1px solid rgba(255,255,255,0.08);
-          padding-left: 32px;
-          animation: fadeUp 0.8s ease-out 0.45s forwards;
-          opacity: 0;
-        }
+  <!-- Pills / Tags -->
+  <!-- Tag 1: 8.5+ Years -->
+  <rect x="196" y="172" width="88" height="24" rx="12" fill="#7c3aed" fill-opacity="0.18" stroke="#7c3aed" stroke-width="1" stroke-opacity="0.45"/>
+  <text x="240" y="188" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#c4b5fd">8.5+ Years</text>
+  <!-- Tag 2 -->
+  <rect x="294" y="172" width="150" height="24" rx="12" fill="#06b6d4" fill-opacity="0.14" stroke="#06b6d4" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="369" y="188" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#67e8f9">Agile · PMO · n8n · GenAI</text>
+  <!-- Tag 3 -->
+  <rect x="454" y="172" width="188" height="24" rx="12" fill="#ec4899" fill-opacity="0.14" stroke="#ec4899" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="548" y="188" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#f9a8d4">Banking · Healthcare · SaaS</text>
 
-        .stat { text-align: center; }
+  <!-- Divider line -->
+  <line x1="688" y1="56" x2="688" y2="224" stroke="#ffffff" stroke-width="1" stroke-opacity="0.08"/>
 
-        .snum {
-          font-size: 26px;
-          font-weight: 900;
-          line-height: 1;
-          letter-spacing: -1px;
-        }
-        .s1 { color: #a78bfa; }
-        .s2 { color: #67e8f9; }
-        .s3 { color: #f9a8d4; }
+  <!-- Stats -->
+  <!-- Stat 1: 60+ -->
+  <text x="756" y="108" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="30" font-weight="900" fill="url(#statPurple)" letter-spacing="-1">60+</text>
+  <text x="756" y="124" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="9" font-weight="600" fill="#64748b" letter-spacing="1.5">PEOPLE LED</text>
 
-        .slabel {
-          font-size: 9px;
-          font-weight: 600;
-          letter-spacing: 1.5px;
-          text-transform: uppercase;
-          color: rgba(255,255,255,0.3);
-          margin-top: 3px;
-        }
+  <!-- Stat 2: 2M+ -->
+  <text x="756" y="162" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="30" font-weight="900" fill="url(#statCyan)" letter-spacing="-1">2M+</text>
+  <text x="756" y="178" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="9" font-weight="600" fill="#64748b" letter-spacing="1.5">CUSTOMERS</text>
 
-        .glow-bar {
-          position: absolute;
-          bottom: 0; left: 0; right: 0;
-          height: 2px;
-          background: linear-gradient(90deg, transparent 0%, #7c3aed 25%, #06b6d4 50%, #ec4899 75%, transparent 100%);
-          animation: shimmer 3s ease-in-out infinite;
-        }
+  <!-- Stat 3: 12 -->
+  <text x="756" y="216" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="30" font-weight="900" fill="url(#statPink)" letter-spacing="-1">12</text>
+  <text x="756" y="232" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="9" font-weight="600" fill="#64748b" letter-spacing="1.5">TEAMS TRANSFORMED</text>
 
-        @keyframes shimmer {
-          0%, 100% { opacity: 0.4; }
-          50%       { opacity: 1; }
-        }
-      </style>
-
-      <div class="hero">
-        <div class="grid"></div>
-        <div class="orb1"></div>
-        <div class="orb2"></div>
-        <div class="orb3"></div>
-
-        <div class="card">
-          <div class="avatar">
-            <div class="avatar-inner">DK</div>
-          </div>
-
-          <div class="body">
-            <div class="eyebrow">Senior Program Manager · Mohali, India</div>
-            <div class="name">Deven <span class="name-accent">Kashyap</span></div>
-            <div class="subtitle">Agile Transformation Leader &nbsp;·&nbsp; PMO Architect &nbsp;·&nbsp; AI Automation Builder</div>
-            <div class="tags">
-              <span class="tag t1">8.5+ Years</span>
-              <span class="tag t2">Agile · PMO · n8n · GenAI</span>
-              <span class="tag t3">Banking · Healthcare · SaaS</span>
-            </div>
-          </div>
-
-          <div class="stats">
-            <div class="stat">
-              <div class="snum s1">60+</div>
-              <div class="slabel">People Led</div>
-            </div>
-            <div class="stat">
-              <div class="snum s2">2M+</div>
-              <div class="slabel">Customers</div>
-            </div>
-            <div class="stat">
-              <div class="snum s3">12</div>
-              <div class="slabel">Teams Transformed</div>
-            </div>
-          </div>
-
-          <div class="glow-bar"></div>
-        </div>
-      </div>
-    </div>
-  </foreignObject>
+  <!-- Bottom glow bar -->
+  <rect x="24" y="254" width="852" height="2" rx="1" fill="url(#glowBar)">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite"/>
+  </rect>
 </svg>
